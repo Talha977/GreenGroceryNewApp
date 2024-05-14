@@ -38,7 +38,7 @@ class SignupViewModel:ObservableObject {
             .map { !$0.isEmpty && $0.isValidPassword()
             }
             .eraseToAnyPublisher()
-    }
+    }s
     
     private var passwordEqualPublisher:AnyPublisher<Bool,Never> {
         Publishers.CombineLatest($password, $confirmPassword)
